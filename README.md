@@ -1,6 +1,16 @@
-# API REST de campañas — ejecución local
+# API REST de campañas — Render y ejecución local
 
 API de solo lectura desarrollada con FastAPI. Devuelve el contenido completo de `campanias.json` sin modificar sus bytes, formato ni valores.
+
+## Publicar en Render
+
+El proyecto incluye `render.yaml` y `.python-version` para publicarlo como **Web Service** en Render. Sigue las instrucciones de [RENDER.md](RENDER.md) para conectar el repositorio y desplegarlo.
+
+- Build Command: `python -m pip install -r requirements.txt`
+- Start Command: `python -m uvicorn main:app --host 0.0.0.0 --port $PORT`
+- Health Check Path: `/health`
+
+Al abrir la URL principal, `/` redirige a `/api/v1/campanias`. Los pasos siguientes permiten seguir ejecutando la misma API localmente.
 
 ## Requisitos
 
@@ -81,7 +91,7 @@ curl.exe http://127.0.0.1:8000/api/v1/campanias
 
 En macOS/Linux usa `curl` en lugar de `curl.exe`.
 
-La dirección raíz `http://127.0.0.1:8000/` devuelve **404** porque no tiene un endpoint definido. Para comprobar el servicio usa `/health`.
+La dirección raíz `http://127.0.0.1:8000/` redirige a `/api/v1/campanias`. Para comprobar el estado del servicio usa `/health`.
 
 ## Detener, reiniciar y desarrollar
 
@@ -115,7 +125,7 @@ En macOS/Linux:
 .venv/bin/python -m unittest -v
 ```
 
-El resultado esperado es **3 pruebas aprobadas** y el mensaje `OK`. Comprueban la integridad del archivo original, la igualdad byte por byte de la respuesta, el tipo de contenido, el endpoint de salud y el rechazo de POST, PUT, PATCH y DELETE.
+El resultado esperado es **4 pruebas aprobadas** y el mensaje `OK`. Comprueban la redirección de la raíz, la integridad del archivo original, la igualdad byte por byte de la respuesta, el tipo de contenido, el endpoint de salud y el rechazo de POST, PUT, PATCH y DELETE.
 
 ## Conservación del JSON original
 
@@ -144,7 +154,7 @@ Get-FileHash -Algorithm SHA256 -LiteralPath .\campanias.json
 | No se encuentra `campanias.json` | Coloca el archivo original junto a `main.py`. |
 | Puerto ocupado / `Address already in use` | Detén el proceso anterior o inicia con `--port 8001`. |
 | El navegador no puede conectarse | Comprueba que la terminal del servidor siga abierta y que la URL use el puerto elegido. |
-| Error 404 al abrir `/` | Consulta `/health`, `/api/v1/campanias` o `/docs`. |
+| Error 404 al abrir `/` | Comprueba que estés ejecutando esta versión de `main.py` y reinicia el servidor; la raíz ahora redirige a campañas. |
 | Falla la prueba de integridad | Restaura `campanias.json` desde el adjunto original; no cambies la huella esperada para ocultar la diferencia. |
 
 ## Dependencias y archivos

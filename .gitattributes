@@ -1,0 +1,2 @@
+# Conservar exactamente los bytes del JSON al subir y clonar con Git.
+campanias.json -text

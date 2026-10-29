@@ -11,6 +11,15 @@ ORIGINAL_SHA256 = "9f1b5c1f890356cd3ff824e801119bfa853bd6c7f1ff107fa7372608da285
 
 
 class ApiTests(unittest.TestCase):
+    def test_root_redirects_to_original_document(self):
+        with TestClient(app) as client:
+            response = client.get("/", follow_redirects=False)
+            self.assertEqual(response.status_code, 307)
+            self.assertEqual(response.headers["location"], "/api/v1/campanias")
+            followed = client.get("/")
+        self.assertEqual(followed.status_code, 200)
+        self.assertEqual(hashlib.sha256(followed.content).hexdigest(), ORIGINAL_SHA256)
+
     def test_original_file_and_response_are_identical(self):
         original = Path(__file__).with_name("campanias.json").read_bytes()
         self.assertEqual(hashlib.sha256(original).hexdigest(), ORIGINAL_SHA256)
