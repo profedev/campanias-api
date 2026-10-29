@@ -1,0 +1,167 @@
+{
+  "api": "campanias-comerciales",
+  "version": "v1",
+  "generado": "2026-10-25T06:00:00-06:00",
+  "total": 9,
+  "data": [
+    {
+      "id_campania": "CMP-2026-03",
+      "nombre": "Crédito Nómina Primavera",
+      "id_producto": "P005",
+      "segmentos_objetivo": [
+        "Nómina"
+      ],
+      "canales": [
+        "Sucursal",
+        "Banca Digital"
+      ],
+      "fecha_inicio": "2026-03-01",
+      "fecha_fin": "2026-05-31",
+      "tasa_promocional": 21.9,
+      "estatus": "FINALIZADA",
+      "meta_colocacion_mxn": 60000000
+    },
+    {
+      "id_campania": "CMP-2026-06",
+      "nombre": "Hipoteca Tasa Fija 2026",
+      "id_producto": "P007",
+      "segmentos_objetivo": [
+        "Preferente",
+        "Patrimonial"
+      ],
+      "canales": [
+        "Ejecutivo",
+        "Sucursal"
+      ],
+      "fecha_inicio": "2026-06-01",
+      "fecha_fin": "2026-12-31",
+      "tasa_promocional": 10.5,
+      "estatus": "ACTIVA",
+      "meta_colocacion_mxn": 250000000
+    },
+    {
+      "id_campania": "CMP-2026-07",
+      "nombre": "Express sin Aval",
+      "id_producto": "P017",
+      "segmentos_objetivo": [
+        "Masivo"
+      ],
+      "canales": [
+        "Contact Center",
+        "WhatsApp"
+      ],
+      "fecha_inicio": "2026-07-15",
+      "fecha_fin": "2026-12-15",
+      "tasa_promocional": 39.9,
+      "estatus": "ACTIVA",
+      "meta_colocacion_mxn": 15000000
+    },
+    {
+      "id_campania": "CMP-2026-08",
+      "nombre": "Auto Regreso a Clases",
+      "id_producto": "P008",
+      "segmentos_objetivo": [
+        "Preferente",
+        "Nómina"
+      ],
+      "canales": [
+        "Sucursal",
+        "Banca Digital"
+      ],
+      "fecha_inicio": "2026-08-01",
+      "fecha_fin": "2026-07-31",
+      "tasa_promocional": 11.9,
+      "estatus": "ACTIVA",
+      "meta_colocacion_mxn": 80000000
+    },
+    {
+      "id_campania": "CMP-2026-09",
+      "nombre": "Inversión Patrimonial Otoño",
+      "id_producto": "P009",
+      "segmentos_objetivo": [
+        "Patrimonial",
+        "Preferente"
+      ],
+      "canales": [
+        "Ejecutivo"
+      ],
+      "fecha_inicio": "2026-09-01",
+      "fecha_fin": "2026-11-30",
+      "tasa_promocional": 9.6,
+      "estatus": "ACTIVA",
+      "meta_colocacion_mxn": 300000000
+    },
+    {
+      "id_campania": "CMP-2026-10",
+      "nombre": "Tarjeta Oro Q4",
+      "id_producto": "P002",
+      "segmentos_objetivo": [
+        "Preferente",
+        "Nómina",
+        "Masivo"
+      ],
+      "canales": [
+        "Sucursal",
+        "Contact Center",
+        "Banca Digital"
+      ],
+      "fecha_inicio": "2026-10-01",
+      "fecha_fin": "2026-12-31",
+      "tasa_promocional": 29.9,
+      "estatus": "ACTIVA",
+      "meta_colocacion_mxn": null
+    },
+    {
+      "id_campania": "CMP-2026-11",
+      "nombre": "Protege a los Tuyos (Vida)",
+      "id_producto": "P012",
+      "segmentos_objetivo": [
+        "Masivo",
+        "Nómina",
+        "Preferente"
+      ],
+      "canales": [
+        "Contact Center",
+        "Banca Digital"
+      ],
+      "fecha_inicio": "2026-10-15",
+      "fecha_fin": "2027-01-31",
+      "tasa_promocional": null,
+      "estatus": "ACTIVA",
+      "meta_colocacion_mxn": null
+    },
+    {
+      "id_campania": "CMP-2026-12",
+      "nombre": "PyME Impulsa",
+      "id_producto": "P014",
+      "segmentos_objetivo": [
+        "PyME"
+      ],
+      "canales": [
+        "Ejecutivo"
+      ],
+      "fecha_inicio": "2026-09-15",
+      "fecha_fin": "2027-03-15",
+      "tasa_promocional": 16.9,
+      "estatus": "ACTIVA",
+      "meta_colocacion_mxn": 120000000
+    },
+    {
+      "id_campania": "CMP-2026-13",
+      "nombre": "Clásica Primer Crédito",
+      "id_producto": "P001",
+      "segmentos_objetivo": [
+        "Masivo"
+      ],
+      "canales": [
+        "Sucursal",
+        "Banca Digital"
+      ],
+      "fecha_inicio": "2026-08-01",
+      "fecha_fin": "2026-12-31",
+      "tasa_promocional": null,
+      "estatus": "ACTIVA",
+      "meta_colocacion_mxn": null
+    }
+  ]
+}
